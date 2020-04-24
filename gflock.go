@@ -29,7 +29,7 @@ func New(file string) *Locker {
 		}
 	}
 	path := filepath.Join(dir, file)
-	lock := flock.NewFlock(path)
+	lock := flock.New(path)
 	return &Locker{
 		flock: lock,
 	}
